@@ -444,13 +444,13 @@ var _reactDom = __webpack_require__(4);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _App = __webpack_require__(15);
+
+var _App2 = _interopRequireDefault(_App);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(
-  "h1",
-  null,
-  "Hello, world!"
-), document.getElementById("root"));
+_reactDom2.default.render(_react2.default.createElement(_App2.default, null), document.getElementById("root"));
 
 /***/ }),
 /* 6 */
@@ -30463,6 +30463,191 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = App;
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _Card = __webpack_require__(16);
+
+var _Card2 = _interopRequireDefault(_Card);
+
+var _Navbar = __webpack_require__(17);
+
+var _Navbar2 = _interopRequireDefault(_Navbar);
+
+var _data = __webpack_require__(18);
+
+var _data2 = _interopRequireDefault(_data);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function App() {
+    var map = _data2.default.map(function (card) {
+        return _react2.default.createElement(_Card2.default, {
+            key: card.id,
+            item: card
+        });
+    });
+    return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(_Navbar2.default, null),
+        _react2.default.createElement(
+            'div',
+            { className: 'app--list' },
+            map
+        )
+    );
+}
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = Card;
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Card(props) {
+    return _react2.default.createElement(
+        "div",
+        { className: "card--container" },
+        _react2.default.createElement("img", { className: "card--img", src: props.item.imageUrl }),
+        _react2.default.createElement(
+            "div",
+            { className: "card--rightSide" },
+            _react2.default.createElement(
+                "div",
+                { className: "card--topContainer" },
+                _react2.default.createElement("img", { src: "../images/Fill219.png", className: "card--loc-img" }),
+                _react2.default.createElement(
+                    "h1",
+                    { className: "card--country" },
+                    props.item.location
+                ),
+                _react2.default.createElement(
+                    "a",
+                    { href: props.item.googleMapsUrl, className: "card--mapsLink" },
+                    "View on Google Maps"
+                )
+            ),
+            _react2.default.createElement(
+                "h2",
+                { className: "card--title" },
+                props.item.title
+            ),
+            _react2.default.createElement(
+                "h3",
+                { className: "card--date" },
+                props.item.startDate,
+                " - ",
+                props.item.endDate
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "card--desc" },
+                props.item.description
+            )
+        )
+    );
+}
+
+//         id: "0",
+//         title: "Mount Fuji",
+//         location: "Japan",
+//         googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
+//         startDate: "12 Jan, 2021",
+//         endDate: "24 Jan, 2021",
+//         description: "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.",
+//         imageUrl: "https://source.unsplash.com/WLxQvbMyfas"
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = Navbar;
+
+var _react = __webpack_require__(2);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Navbar() {
+    return _react2.default.createElement(
+        "nav",
+        null,
+        _react2.default.createElement(
+            "div",
+            { className: "nav--container" },
+            _react2.default.createElement("img", { src: "../images/Fill213.png", className: "nav--logo" }),
+            _react2.default.createElement(
+                "h1",
+                { className: "nav--text" },
+                "my travel journal"
+            )
+        )
+    );
+}
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = [{
+    id: "0",
+    title: "Mount Fuji",
+    location: "Japan",
+    googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
+    startDate: "12 Jan, 2021",
+    endDate: "24 Jan, 2021",
+    description: "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.",
+    imageUrl: "https://source.unsplash.com/WLxQvbMyfas"
+}, {
+    id: "1",
+    title: "Amman",
+    location: "Jordan",
+    googleMapsUrl: "https://www.google.com/search?q=Amman&oq=Amman&aqs=chrome..69i57j46i67i433j0i67j46i67i175i199j0i67l6.156j0j7&sourceid=chrome&ie=UTF-8",
+    startDate: "15 Jan, 2023",
+    endDate: "30 Jan, 2021",
+    description: "Amman, the capital of Jordan, is a modern city with numerous ancient ruins. Atop Jabal al-Qala’a hill, the historic Citadel includes the pillars of the Roman Temple of Hercules and the 8th-century Umayyad Palace complex, known for its grand dome.",
+    imageUrl: "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTcX6IKT_8JARE-bZtsQBeeIGBrzEPLQvvyRj98hH_l_elbEcWh6so5FhY5rRn3uvgJv3KL988B9cw20-4AfgovJNMPBEsrfuzDRJZlZw"
+}];
 
 /***/ })
 /******/ ]);

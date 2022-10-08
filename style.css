@@ -1,4 +1,122 @@
 * {
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+
+}
+nav {
+    display:flex;
+    background: #F55A5A;
+    align-items:center;
+    height:55px;
+    margin-bottom: 27px;
+    
+}
+.nav--logo {
+    width:24px;
+    height:24px;
+    
 }
 
+.nav--container {
+    display:flex;
+    align-items:center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.nav--text {
+    padding-left: 5px;
+    font-weight: 500;
+    font-size: 14.4;
+    color:white;
+    
+}
+
+.app--list {
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    padding: 18px;
+    
+    
+}
+.card--container {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    margin-left: 40px;
+    display:flex;
+    width: 470px;
+    height:168px
+}
+
+.card--img {
+    border-radius: 5px;
+    height:168px;
+    width: 125px;
+}
+.card--rightSide {
+    margin-left: 19px;
+}
+.card--topContainer {
+    display: flex;
+    align-items: center;
+}
+.card--loc-img {
+    max-width:7px;
+    height:9px;
+}
+.card--country {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 12px;
+    letter-spacing: 0.17em;
+    color: #2B283A;
+    margin-right: 12px;
+    margin-left:4px;
+}
+.card--mapsLink {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 12px;
+    /* identical to box height */
+
+    text-decoration-line: underline;
+    color: #918E9B;
+
+}
+.card--title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #2B283A;
+    margin-top: 0px;
+    margin-bottom: 0;
+
+}
+.card--date {
+    margin-top: 7px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10.24px;
+    line-height: 12px;
+
+    color: #2B283A;
+}
+.card--desc {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10.24px;
+    line-height: 150%;
+    /* or 15px */
+
+    max-width: 326px;
+    color: #2B283A;
+}
